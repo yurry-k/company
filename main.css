@@ -1,0 +1,282 @@
+body {
+    font-family: '游ゴシック';
+    text-align: center;
+    margin: 0 auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+header {
+    background-color: rgba(207, 207, 207, 0);
+    height: 40px;
+    width: 100%;
+    padding: 20px;
+    z-index: 1000;
+    line-height: 40px;
+    position: fixed;
+}
+
+.logo {
+    float: left;
+    padding-left: 50px;
+}
+
+.menu {
+    list-style: none;
+    float: right;
+    font-size: 15px;
+    padding: 0 100px;
+    z-index: 500;
+}
+
+.menu > li {
+    display: inline-block;
+
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #ffffff;
+    text-shadow: dimgrey 2px 1px 2px;
+    display: block;
+    padding: 0 20px;
+}
+
+.menu > li:hover > ul {
+    display: block;
+    position: fixed
+}
+
+.menu li:hover ul a {
+    background-color: #309ed1;
+    text-align: center;
+    white-space: nowrap;
+    padding: 0 50px;
+}
+
+.menu li ul {
+    list-style: none;
+    display: none;
+    
+}
+.menu li ul a {
+    text-decoration: none;
+    display: block;
+    
+}
+
+.menu li ul li {
+    position: relative;
+
+}
+
+.menu li ul li:hover > a {
+    background-color: #236c8d;
+    
+}
+
+.menu li ul li ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+.menu > li:hover > ul li:hover > ul{
+    display: block;
+    
+}
+
+.menu li ul li ul::after{
+    position: absolute;
+    content: "";
+    top: 13px;
+    left: -20px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-left-color: #ffffff;
+  }
+  
+  
+
+.contact  {
+    background-color: #309ed1;
+    border-radius: 100px;
+}
+
+
+.swiper-wrapper .swiper-slide {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 100vh;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+   
+}
+
+.text-area {
+    position: relative;
+    top: 50%;
+    width: 50%;
+    padding: 30px 30px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #ffffff;
+}
+ h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.text p {
+    font-size: 20px;
+}
+
+.btn {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 8px 20px;
+    background-color: #309ed1;
+    text-decoration: none;
+    border-radius: 100px;
+    margin-top: 50px;
+
+}
+
+.btn:hover {
+    background-color: #1c6c91;
+    text-shadow: #ffffff 0 0 7px;
+}
+
+.product h2 {
+    padding: 40px;
+    font-weight: 500;
+}
+
+.product img {
+    width: 100%;
+}
+
+.business h2 {
+    padding-top: 40px;
+    font-weight: 600;
+    font-size: 25px;   
+}
+
+.business p {
+    width: 100px;
+    border-bottom: 5px solid #369dcd;
+    margin-bottom: 20px;
+}
+
+.business img {
+    width: 100%;
+}
+
+.news {
+    text-align: center;
+    background: white;
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+}
+
+
+.news-title {
+    position: absolute;
+    width: 300px;
+    line-height: 200px;
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+
+.news input {
+    display: none;
+}
+
+.news-bar {
+    float: right;
+}
+
+.news ul {
+    list-style: none;
+
+}
+
+.news li {
+    height: 70px;
+    line-height: 70px;
+}
+
+.news a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+}
+
+.news-list01 li::before {
+    content: "";
+    float: left;
+    width: 300px;
+    height: 100%;
+    background-color: #1a497f;
+    margin: 0;
+}
+
+.news-list02 li::before {
+    content: "";
+    float: left;
+    width: 300px;
+    height: 100%;
+    background-color: #1a497f;
+    margin: 0;
+}
+
+.mark:hover {
+    cursor: pointer;
+}
+
+.mark::after {
+    content: "";
+    padding: 8px;
+    border: 2px solid #ffffff;
+    border-top: transparent;
+    border-left: transparent;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 140px;
+    top: 170px;
+}
+
+
+.news-list02 li {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.news-accordion:checked + .news-list02 li {
+    height: 70px;
+    opacity: 1;
+    
+}
+
+.news-accordion:checked + .mark::after {
+    transform: rotate(225deg);
+}
+
